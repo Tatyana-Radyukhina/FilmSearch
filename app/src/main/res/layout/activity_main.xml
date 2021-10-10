@@ -8,35 +8,78 @@
     android:layout_centerInParent="true"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/app_bar_layout"
-        android:layout_width="300dp"
-        android:layout_height="500dp"
-        android:background="#FFEB3B"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/bottom_bar_layout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_bar_layout" />
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Films"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_round_menu_24"
+            app:menu="@menu/top_app_bar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
         android:id="@+id/bottom_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#4000F1"
+        android:background="#9C27B0"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:context=".MainActivity"/>
 
     <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/top_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#9C27B0"
+        android:background="#4000F1"
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".MainActivity"/>
 
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#30DC12"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar_layout"
+        app:layout_constraintStart_toStartOf="parent">
 
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text"/>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text"/>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
