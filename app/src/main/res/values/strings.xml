@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">FilmSearch</string>
     <string name="text">Button</string>
+    <string name="text10">Меню</string>
+    <string name="text20">Избранное</string>
+    <string name="text30">Посмотреть позже</string>
+    <string name="text40">Подборки</string>
+    <string name="text50">Настройки</string>
     <string name="text1">Избранное</string>
     <string name="text2">Поиск</string>
     <string name="text3">More</string>
+    <string name="disclaimer">Постеры предоставлены https://www.movieposters.com/products/no-time-to-die-mpw-125980</string>
 </resources>
