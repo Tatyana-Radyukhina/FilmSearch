@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.annotation.Nullable
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.subscribe.view.*
 
@@ -18,10 +19,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+
         button6.setOnClickListener {
             val view = ImageView(this)
             a1.addView(imageView6)
         }
+
+        a1.layoutTransition.setAnimator(LayoutTransition.APPEARING, AnimatorInflater.loadAnimator(this, R.animator.animator_file))
+        a1.layoutTransition.enableTransitionType(LayoutTransition.CHANGING)
+
 
         button6.setOnClickListener {
             if(a1.childCount != 0) {
@@ -29,8 +36,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        a1.layoutTransition.enableTransitionType(LayoutTransition.CHANGING)
-        a1.layoutTransition.setAnimator(LayoutTransition.APPEARING, AnimatorInflater.loadAnimator(this, R.animator.animator_file))
+
+
+
+
+
 
 
 

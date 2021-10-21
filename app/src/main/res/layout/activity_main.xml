@@ -10,52 +10,42 @@
 
     <FrameLayout
         android:id="@+id/a1"
-        android:layout_width="600dp"
-        android:layout_height="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintTop_toBottomOf="@+id/top_container"
-        android:animateLayoutChanges="true"
-        >
+        android:orientation="horizontal"
+        android:animateLayoutChanges="true">
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/interstellar"
-            android:scaleType="centerInside"
-            android:scaleY="0f"
-            android:scaleX="0f"/>
+            android:src="@drawable/interstellar" />
 
         <ImageView
             android:id="@+id/imageView7"
-            android:scaleType="centerInside"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/alive"
-            android:scaleY="0f"
-            android:scaleX="0f"/>
+            android:src="@drawable/alive" />
 
         <ImageView
             android:id="@+id/imageView8"
-            android:scaleType="centerInside"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/titanic"
-            android:scaleY="0f"
-            android:scaleX="0f"/>
+            android:src="@drawable/titanic" />
 
         <ImageView
             android:id="@+id/imageView9"
-            android:scaleType="centerInside"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/passangers"
-            android:scaleY="0f"
-            android:scaleX="0f"/>
+            android:src="@drawable/passangers" />
 
     </FrameLayout>
+
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/top_app_bar"
@@ -101,37 +91,37 @@
             android:orientation="horizontal"
             tools:context=".MainActivity">
 
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:scaleType="centerCrop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/avengers"
-                    android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/imageView1"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avengers"
+                android:layout_weight="1"/>
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:scaleType="centerCrop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/no_time_to_die"
-                    android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_time_to_die"
+                android:layout_weight="1"/>
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:scaleType="centerCrop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/black"
-                    android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/imageView3"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/black"
+                android:layout_weight="1"/>
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:scaleType="centerCrop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/dune"
-                    android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/imageView4"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dune"
+                android:layout_weight="1"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -175,75 +165,81 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navigation_menu" />
 
-            <FrameLayout
-            android:id="@+id/bottom_bar_layout"
+    <FrameLayout
+        android:id="@+id/bottom_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#0D1D7A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:context=".MainActivity"/>
+
+    <LinearLayout
+        android:id="@+id/central_buttons"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/corner_background"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_container"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#0D1D7A"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:context=".MainActivity"/>
-
-            <LinearLayout
-                android:id="@+id/central_buttons"
-            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/corner_background"
-            android:layout_gravity="center"
-            app:layout_constraintBottom_toTopOf="@id/bottom_bar_layout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/top_container"
-            app:layout_constraintStart_toStartOf="parent">
+            android:text="@string/text10"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text10"
-                    android:textColor="@android:color/white"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text20"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text20"
-                    android:textColor="@android:color/white"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text30"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
 
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text30"
-                    android:textColor="@android:color/white"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text40"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
 
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text40"
-                    android:textColor="@android:color/white"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text50"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
 
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text50"
-                    android:textColor="@android:color/white"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text60"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
 
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text60"
-                    android:textColor="@android:color/white"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
 
-            </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
