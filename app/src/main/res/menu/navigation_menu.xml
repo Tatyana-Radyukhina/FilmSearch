@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/favorites"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/text1"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/watch_later"
+        android:icon="@drawable/ic_baseline_query_builder_24"
+        android:title="@string/text2"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/selections"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:title="Подборки"
+        app:showAsAction="ifRoom" />
+
+</menu>
